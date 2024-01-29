@@ -14,10 +14,7 @@ app.use(express.static("uploads"));
 
 // Database connection
 mongoose
-  .connect(process.env.DB_URL, {
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true
-  })
+  .connect(process.env.DB_URL, {})
   .then(() => console.log("Connected to the database!"))
   .catch((error) => console.error(error));
 

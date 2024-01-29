@@ -4,7 +4,7 @@ const multer = require('multer');
 const API = require('../controllers/api');
 
 let storage = multer.diskStorage({
-    destination: function(req, file, cb) { // Corrected parameter name to cb
+    destination: function(req, file, cb) {
         cb(null, './uploads');
     },
     filename: function(req, file, cb) {
