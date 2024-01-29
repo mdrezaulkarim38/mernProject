@@ -21,7 +21,7 @@ mongoose
   .then(() => console.log("Connected to the database!"))
   .catch((error) => console.error(error));
 
-// app.use(router);
+app.use(router);
 app.all('*',(req,res)=>{
     res.status(404).json('404 Not Found');
 });
